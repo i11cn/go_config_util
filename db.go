@@ -324,7 +324,6 @@ func create_redis(cfg config.Config) (*redis.Pool, error) {
 			}
 		}
 	}
-	fmt.Println(net, addr)
 	ret.Dial = func() (redis.Conn, error) {
 		return redis.Dial(net, addr, opts...)
 	}
